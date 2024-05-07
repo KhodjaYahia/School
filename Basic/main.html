@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Floating Bubbles with Grades</title>
+    <style>
+        /* Style for the container */
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Style for the bubbles */
+        .bubble {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-color: #ADD8E6;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: #333;
+            cursor: pointer;
+            transition: transform 2s linear infinite;
+        }
+
+        /* Generate multiple bubbles with different starting positions */
+        .bubble:nth-child(1) {
+            top: 20%;
+            left: 20%;
+            animation: float1 4s linear infinite alternate;
+        }
+        .bubble:nth-child(2) {
+            top: 20%;
+            left: 50%;
+            animation: float2 4s linear infinite alternate;
+        }
+        .bubble:nth-child(3) {
+            top: 20%;
+            left: 80%;
+            animation: float3 4s linear infinite alternate;
+        }
+        .bubble:nth-child(4) {
+            top: 50%;
+            left: 20%;
+            animation: float4 4s linear infinite alternate;
+        }
+        .bubble:nth-child(5) {
+            top: 50%;
+            left: 50%;
+            animation: float5 4s linear infinite alternate;
+        }
+        .bubble:nth-child(6) {
+            top: 50%;
+            left: 80%;
+            animation: float6 4s linear infinite alternate;
+        }
+
+        /* Float animations for bubbles */
+        @keyframes float1 {
+            0%, 100% { transform: translateY(-10px); }
+            50% { transform: translateY(10px); }
+        }
+        @keyframes float2 {
+            0%, 100% { transform: translateY(10px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes float3 {
+            0%, 100% { transform: translateY(-10px); }
+            50% { transform: translateY(10px); }
+        }
+        @keyframes float4 {
+            0%, 100% { transform: translateY(10px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes float5 {
+            0%, 100% { transform: translateY(-10px); }
+            50% { transform: translateY(10px); }
+        }
+        @keyframes float6 {
+            0%, 100% { transform: translateY(10px); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Bubbles with click events to navigate to different puzzles -->
+        <div class="bubble" onclick="goToPuzzle(1)">1</div>
+        <div class="bubble" onclick="goToPuzzle(2)">2</div>
+        <div class="bubble" onclick="goToPuzzle(3)">3</div>
+        <div class="bubble" onclick="goToPuzzle(4)">4</div>
+        <div class="bubble" onclick="goToPuzzle(5)">5</div>
+        <div class="bubble" onclick="goToPuzzle(6)">6</div>
+    </div>
+
+    <!-- JavaScript for navigation -->
+    <script>
+        // Function to navigate to different puzzle pages based on the grade clicked
+        function goToPuzzle(grade) {
+            // Replace 'grade' with the appropriate page URL for each grade
+            // e.g., 'puzzle1.html', 'puzzle2.html', etc.
+            const puzzleUrl = `puzzle${grade}.html`;
+            // Redirect to the puzzle page for the clicked grade
+            window.location.href = puzzleUrl;
+        }
+    </script>
+</body>
+</html>
