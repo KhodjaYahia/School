@@ -62,7 +62,6 @@ var firebaseConfig = {
   
       // DOne
       alert('User Created!!')
-      window.location.href = 'main.html'
     })
     .catch(function(error) {
       // Firebase will use this to alert of its errors
@@ -104,7 +103,7 @@ var firebaseConfig = {
   
       // DOne
       alert('User Logged In!!')
-      window.location.href = 'main.html'
+
   
     })
     .catch(function(error) {
